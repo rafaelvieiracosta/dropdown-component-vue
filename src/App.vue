@@ -1,28 +1,38 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container mx-auto mt-10 px-10">
+    <div class="mx-auto mt-20">
+      <h3 class="text-lg text-center font-bold mb-4">
+        Componente dropdown
+      </h3>
+
+      <div class="flex justify-center">
+        <DropdownRoot text="Menu">
+          <DropdownItem>Item 1</DropdownItem>
+          <DropdownDivider/>
+          <DropdownItem>Item 2</DropdownItem>
+          <DropdownDivider/>
+          <DropdownItem>Item 3</DropdownItem>
+        </DropdownRoot>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DropdownRoot from './components/DropdownRoot.vue'
+import DropdownItem from './components/DropdownItem.vue'
+import DropdownDivider from './components/DropdownDivider.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DropdownRoot,
+    DropdownItem,
+    DropdownDivider
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
