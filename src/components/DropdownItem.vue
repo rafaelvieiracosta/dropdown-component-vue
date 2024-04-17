@@ -1,9 +1,9 @@
 <template>
   <component 
     :is="is" 
-    :href="href"
+    :href="localHref"
     :to="to"
-    class="block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 cursor-pointer"
+    class="block flex items-center w-full px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900 cursor-pointer"
   >
     <slot />
   </component>
@@ -23,6 +23,13 @@
       }
     },
     computed: {
+      localHref() {
+        if (typeof this.to !== 'undefined') {
+          return undefined;
+        }
+
+        return this.href
+      },
       is () {
         if (typeof this.to !== 'undefined') {
           return 'RouterLink';

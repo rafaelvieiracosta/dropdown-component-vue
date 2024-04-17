@@ -9,7 +9,7 @@
         <DropdownRoot text="Menu">
           <DropdownItem href="https://google.com">Item 1</DropdownItem>
           <DropdownDivider/>
-          <DropdownItem to="/teste">Item 2</DropdownItem>
+          <DropdownItem href="https://google.com" :to="{ name: 'foo' }">Item 2</DropdownItem>
           <DropdownDivider/>
           <DropdownItem>Item 3</DropdownItem>
         </DropdownRoot>
