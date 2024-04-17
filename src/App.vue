@@ -7,9 +7,9 @@
 
       <div class="flex justify-center">
         <DropdownRoot text="Menu">
-          <DropdownItem>Item 1</DropdownItem>
+          <DropdownItem href="https://google.com">Item 1</DropdownItem>
           <DropdownDivider/>
-          <DropdownItem>Item 2</DropdownItem>
+          <DropdownItem to="/teste">Item 2</DropdownItem>
           <DropdownDivider/>
           <DropdownItem>Item 3</DropdownItem>
         </DropdownRoot>
